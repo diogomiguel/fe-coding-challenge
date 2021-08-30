@@ -1,5 +1,7 @@
-import { all } from 'redux-saga/effects'
+import { all } from 'redux-saga/effects';
+
+import { watchEveryCheckGameWinner } from './gameSagas';
 
 export default function* rootSaga() {
-  yield all([]);
+  yield all([watchEveryCheckGameWinner()]);
 }
