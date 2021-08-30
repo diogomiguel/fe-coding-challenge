@@ -1,4 +1,4 @@
-import { takeEvery, select } from 'redux-saga/effects';
+import { takeEvery, select, put } from 'redux-saga/effects';
 
 import { SELECT_CELL } from '../actions/moves';
 import { setGameWinner } from '../actions/game';
@@ -9,8 +9,6 @@ export function* checkGameWinner({ currentPlayer }) {
   const diagonalScore = [0, 0];
 
   const board = yield select(selectBoard);
-
-  console.log('currentPlayer', currentPlayer);
 
   // Some so we can terminate early if a winner is found before EOL
   const isPlayerWinner = board.some((row, i) => {
@@ -29,12 +27,12 @@ export function* checkGameWinner({ currentPlayer }) {
     }
 
     // 3. All LHS started diagonals the same
-    if (row[i]) {
+    if (row[i] === currentPlayer) {
       diagonalScore[0] += 1;
     }
 
     // 4. All RHS started diagonals the same
-    if (row[BOARD_MOVES - 1 - i]) {
+    if (row[BOARD_MOVES - 1 - i] === currentPlayer) {
       diagonalScore[1] += 1;
     }
 
@@ -42,8 +40,7 @@ export function* checkGameWinner({ currentPlayer }) {
   });
 
   if (isPlayerWinner) {
-    console.log('winner', currentPlayer);
-    setGameWinner(currentPlayer);
+    yield put(setGameWinner(currentPlayer));
   }
 }
 
