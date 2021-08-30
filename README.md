@@ -41,3 +41,20 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+## Suggested Roadmap
+
+Following this MLV implementation, a few ways to improve the codebase without much disruption to legacy could would be:
+
+* Move global `index.css` styles to `Template` and add a few more to make sure `rem` are matching the reset standard expectation;
+* Add some integration specs between `Board` and `GameInfo` such as simulate a winning condition through `BoardCell` interaction;
+* Make `theme` more `themeable`;
+* Split `reducers/index` into their own two namespaced files: `board` and `game`.
+
+Furthermore Multiple UX improvements could be done such as:
+
+* Center the content vertically screen height permitting;
+* Display winner info in overlay;
+* Indicate end of game on the board;
+* Visually highlight winning combination cells on the board after winner found;
+* Allow change the size of the grid dynamically.
