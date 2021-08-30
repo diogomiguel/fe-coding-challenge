@@ -7,8 +7,9 @@ export const theme = {
     secondaryAccent: '#FFFBAD',
   },
   typography: {
-    paragraph: ['1.2rem', '1.4rem'],
+    paragraph: ['1.2rem', '1.4rem', '1.6rem', '2rem'],
     board: ['4rem', '8rem'],
+    buttons: ['1.4rem', '1.6rem'],
   },
   media: {
     breakpoints: {
