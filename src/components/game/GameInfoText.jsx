@@ -7,7 +7,7 @@ export const GameInfoText = styled.p`
   margin: 0;
 `;
 
-export const GameInfoTextWinner = styled.strong`
+export const GameInfoTextResult = styled.strong`
   font-size: ${({ theme }) => theme.typography.paragraph[2]};
 
   ${({ theme }) => theme.media.breakpoints.s} {

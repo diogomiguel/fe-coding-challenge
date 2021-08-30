@@ -7,7 +7,7 @@ import {
   selectHasGameEnded,
 } from '../../store/selectors/game';
 
-import { GameInfoText, GameInfoTextWinner } from './GameInfoText';
+import { GameInfoText, GameInfoTextResult } from './GameInfoText';
 import { GameInfoButtonResetGame } from './GameInfoButtonResetGame';
 
 export const GameInfo = () => {
@@ -19,12 +19,12 @@ export const GameInfo = () => {
     return (
       <>
         <GameInfoText>
-          <GameInfoTextWinner>
+          <GameInfoTextResult>
             {winner} won!!!{' '}
             <span role="img" aria-label="winner">
               &#10024;
             </span>
-          </GameInfoTextWinner>
+          </GameInfoTextResult>
         </GameInfoText>
         <GameInfoButtonResetGame>New game</GameInfoButtonResetGame>
       </>
@@ -35,7 +35,7 @@ export const GameInfo = () => {
     return (
       <>
         <GameInfoText>
-          <strong>Tie!</strong>
+          <GameInfoTextResult>Tie!</GameInfoTextResult>
         </GameInfoText>
         <GameInfoButtonResetGame>New game</GameInfoButtonResetGame>
       </>
