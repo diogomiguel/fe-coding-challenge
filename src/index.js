@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from '@emotion/react';
 import './index.css';
 import { TemplateGame } from './components/templates/TemplateGame';
-import { Board } from './components/board/Board';
-import { GameInfo } from './components/game/GameInfo';
+import { Board } from './components/board';
+import { GameInfo } from './components/game-info';
 import configureStore from './store';
 import { theme } from './styles/theme';
 

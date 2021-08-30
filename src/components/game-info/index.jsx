@@ -44,7 +44,7 @@ export const GameInfo = () => {
 
   return (
     <GameInfoText>
-      Next player: <strong>{nextPlayer}</strong>
+      Player: <strong>{nextPlayer}</strong>
     </GameInfoText>
   );
 };
