@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { SELECT_CELL } from '../actions/moves';
-import { SET_GAME_WINNER } from '../actions/moves';
+import { SET_GAME_WINNER } from '../actions/game';
 import { BOARD_MOVES } from '../../constants/board';
 
 export const createBoard = (i) =>
